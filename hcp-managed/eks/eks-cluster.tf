@@ -16,7 +16,7 @@ module "eks" {
   kubernetes_version = "1.34"
 
   vpc_id                         = module.vpc.vpc_id
-  subnet_ids                     = module.vpc.public_subnets
+  subnet_ids                     = module.vpc.private_subnets
   endpoint_public_access = true
 
   addons = {
