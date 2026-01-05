@@ -3,6 +3,9 @@ resource "kubernetes_namespace" "consul" {
   metadata {
     name = "consul"
   }
+
+  # Ensure the EKS cluster (and its RBAC changes) is created before creating this namespace
+  depends_on = [module.eks]
 }
 
 # Create Consul deployment

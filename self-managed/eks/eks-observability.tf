@@ -3,6 +3,9 @@ resource "kubernetes_namespace" "observability" {
   metadata {
     name = "observability"
   }
+
+  # Ensure the EKS cluster (and its RBAC changes) is created before creating this namespace
+  depends_on = [module.eks]
 }
 
 # Create prometheus deployment
