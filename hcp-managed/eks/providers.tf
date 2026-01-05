@@ -2,31 +2,31 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 6.27"
+      version = "~> 5.0"
     }
     hcp = {
       source  = "hashicorp/hcp"
-      version = ">= 0.112"
+      version = ">= 0.52"
     }
     consul = {
       source = "hashicorp/consul"
-      version = ">= 2.23"
+      version = ">= 2.20"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = ">= 3.1"
+      version = "~> 2.23"
     }
     helm = {
       source  = "hashicorp/helm"
-      version = ">= 3.2"
+      version = "~> 2.13"
     }
     kubectl = {
       source  = "gavinbunney/kubectl"
-      version = ">= 1.19"
+      version = ">= 1.14"
     }
     random = {
       source  = "hashicorp/random"
-      version = ">= 3.7"
+      version = ">= 3.1"
     }
   }
 
