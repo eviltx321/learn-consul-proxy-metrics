@@ -23,6 +23,9 @@ module "vpc" {
   single_nat_gateway   = true
   enable_dns_hostnames = true
 
+  # Ensure instances launched into public subnets are auto-assigned public IPs
+  map_public_ip_on_launch = true
+
   public_subnet_tags = {
     "kubernetes.io/cluster/${local.name}" = "shared"
     "kubernetes.io/role/elb"              = 1
